@@ -1,2 +1,4 @@
-# data-engineering-zoomcamp-daudjan
-My personal implementation of the Data Engineering Zoomcamp 2025 . Building end-to-end data pipelines with Docker, Prefect, BigQuery/Fabric, dbt, Spark, and Kafka
+# Data Engineering Zoomcamp 2025 – Daud Jan
+
+My personal implementation of the Data Engineering Zoomcamp 2025.  
+This repo contains hands-on work: Docker, Prefect, BigQuery/Fabric, dbt, Spark, and Kafka.  
