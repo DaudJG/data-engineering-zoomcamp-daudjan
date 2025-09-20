@@ -1,16 +1,17 @@
-# PostgreSQL Setup (Docker)
-
 ## Run Postgres Container
+
+Start Postgres with the helper script:
+
 ```bash
-docker run -d \
-  -e POSTGRES_USER=root \
-  -e POSTGRES_PASSWORD=root \
-  -e POSTGRES_DB=ny_taxi \
-  -v $(pwd)/01-docker-terraform/2_docker_sql/ny_taxi_postgres_data:/var/lib/postgresql/data \
-  -p 5433:5432 \
-  --name ny_taxi_pg \
-  postgres:13
+bash start_postgres.sh
 ```
+
+This script:
+
+* Starts the container as `ny_taxi_pg`
+* Mounts the persistent data folder (`ny_taxi_postgres_data/`)
+* Mounts the `sql/` folder (for running scripts)
+* Uses defaults: user `root`, password `root`, db `ny_taxi`, port `5433`
 
 ### Details
 
@@ -40,16 +41,3 @@ Logs can be followed with:
 ```bash
 docker logs -f ny_taxi_pg
 ```
-
----
-
-## Running Postgres in Docker ensures:
-
-* **Reproducibility** → anyone can recreate the same DB environment.
-* **Isolation** → no need to install Postgres locally.
-* **Persistence** → DB files are stored in `ny_taxi_postgres_data/` on your local machine.
-
----
-
-
-
