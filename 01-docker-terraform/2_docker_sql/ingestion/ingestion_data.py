@@ -15,3 +15,7 @@ if __name__ == "__main__":
     parser.add_argument("--url", required=True, help="URL of the CSV file")
 
     args = parser.parse_args()
+
+    print(f"Reading data from {args.url} ")
+    df = pd.read_csv(args.url, compression="gzip")
+    print(f"Loaded {len(df)} rows and {len(df.columns)} columns")
