@@ -1,1 +1,15 @@
 ny_taxi_postgres_data/
+
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS / editor stuff
+.DS_Store
+*.swp
