@@ -41,3 +41,26 @@ Logs can be followed with:
 ```bash
 docker logs -f ny_taxi_pg
 ```
+
+### Verifying Database Health
+
+You can run a basic sanity check using the provided SQL script:
+
+```bash
+pgcli -h localhost -p 5433 -u root -d ny_taxi
+```
+
+Enter password `root` when prompted.
+Then inside the prompt:
+
+```sql
+\i sql/test_connection.sql
+```
+
+Expected output:
+
+* `SELECT 1 AS health_check;` → returns `1`
+* `SELECT version();` → shows Postgres version (e.g. 13.x)
+* `SELECT NOW();` → returns the current timestamp
+
+This confirms the container is running correctly, the database is accessible, and the connection parameters in `start_postgres.sh` are valid.
