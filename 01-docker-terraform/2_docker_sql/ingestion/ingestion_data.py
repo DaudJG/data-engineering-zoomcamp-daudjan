@@ -19,3 +19,13 @@ if __name__ == "__main__":
     print(f"Reading data from {args.url} ")
     df = pd.read_csv(args.url, compression="gzip")
     print(f"Loaded {len(df)} rows and {len(df.columns)} columns")
+
+    engine_url = f"postgresql://{args.user}:{args.password}@{args.host}:{args.port}/{args.db}"
+    engine = create_engine(engine_url)
+ 
+    df.to_sql(
+    name=args.table_name,
+    con=engine,
+    if_exists="replace",   
+    index=False)            
+    print(f"Data written to Postgres table: {args.table_name}")
