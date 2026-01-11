@@ -57,3 +57,6 @@ node_modules/
 *.key
 credentials.json
 secrets.json
+
+# Ignore local main entry used for quick local runs
+2026_cohort/main.py
