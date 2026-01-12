@@ -1,0 +1,2 @@
+# uv.lock placeholder created to allow `uv sync --locked` to run during build
+# If you manage dependencies with `uv` (astral-sh/uv), regenerate this file locally
