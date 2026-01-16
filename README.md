@@ -1,8 +1,8 @@
- Engineering Zoomcamp – Progress & Portfolio
+# Engineering Zoomcamp – Progress & Portfolio
 
 This repository documents my journey through the Data Engineering Zoomcamp. It reflects a focus on independent implementation, code refactoring, and mastering modern data pipelines.Data
 
-Repository Structure
+## Repository Structure
 
 📂 2026_cohort/ (Active Development)
 
@@ -12,7 +12,9 @@ This directory contains my active work for the 2026 live cohort.
 
 Approach: I focus on adapting the course material rather than simply copying boilerplate code. This involves custom implementations and exploring alternative solutions to ensure a deep understanding of the concepts.
 
-Tech Stack: Docker, Terraform, GCP, Airflow, DBT.
+- Tech Stack: Docker, Sql, Python, Terraform, GCP, Airflow, DBT.
+
+  -----
 
 📂 archive_2025/ (Legacy)
 
