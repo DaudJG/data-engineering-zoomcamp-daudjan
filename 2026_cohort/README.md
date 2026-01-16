@@ -3,10 +3,9 @@
 This directory contains my coursework and projects for the **Data Engineering Zoomcamp 2026** cohort (run by DataTalks.Club).
 
 ## Development Environment
-This project is built using a **Mobile-First Cloud Development** approach.
-* **Hardware:** Samsung S10 Lite (Android).
-* **Environment:** GitHub Codespaces (Cloud-based VS Code environment).
-* **Goal:** To demonstrate that professional Data Engineering pipelines can be built using cloud-native tools, regardless of local hardware limitations.
+I'm building this using a **Mobile-First Cloud Development** setup - basically developing on my Samsung S10 Lite using GitHub Codespaces. 
+
+Why? Because I wanted to challenge myself: prove that you don't need fancy local hardware to build solid data engineering pipelines. All you need is cloud tools and the right mindset. It's actually pretty cool seeing how far cloud development has come.
 
 ## Curriculum Progress
 
@@ -40,18 +39,19 @@ This project is built using a **Mobile-First Cloud Development** approach.
 
 ## How to Use
 
-Each module is self-contained with its own dependencies:
+Each module handles a specific part of the data engineering pipeline and manages its own dependencies independently. This keeps things organized and prevents one module from breaking another.
 
-1. Navigate to the module directory
-2. Follow the module's README for setup and execution
-3. Module dependencies are isolated in each pipeline's `pyproject.toml`
+To work with a module:
+1. Go into the module directory
+2. Check its README for instructions
+3. All dependencies are contained within that module - no global conflicts
 
-This structure allows:
-- ✅ Clean separation of concerns
-- ✅ No dependency conflicts between modules
-- ✅ Easy to add new modules
-- ✅ Each module can have different Python versions/dependencies
+I structured it this way because I want to keep things modular from the start. It's easier to scale and experiment with different tech stacks when each module is self-contained.
 
 ## Module 1: Docker & Terraform
-* **Objective:** Setting up the infrastructure (PostgreSQL database) and ingestion scripts.
-* **Key Learnings:** Container management, network bridging in Docker, and Infrastructure as Code basics.
+
+This is where I'm learning the fundamentals - how to containerize applications and automate infrastructure setup.
+
+**What I'm doing:** Building a PostgreSQL database in Docker, setting up data ingestion scripts, and eventually automating it all with Terraform.
+
+**Why it matters:** Docker and IaC are essential skills for any data engineer. I want to understand them deeply, not just use them superficially.
