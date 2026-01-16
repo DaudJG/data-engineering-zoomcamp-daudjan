@@ -1,18 +1,6 @@
 [project]
 name = "2026-cohort"
 version = "0.1.0"
-description = "Add your description here"
+description = "Data Engineering Zoomcamp 2026 - Modular project structure"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "pandas>=2.3.3",
-    "pyarrow>=22.0.0",
-]
-
-[dependency-groups]
-dev = [
-    "jupyter>=1.1.1",
-    "jupyterlab>=4.0.0",
-    "pgcli>=4.4.0",
-    "ipykernel>=6.29.0",
-]

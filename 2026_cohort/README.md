@@ -23,17 +23,34 @@ This project is built using a **Mobile-First Cloud Development** approach.
 
 ```
 2026_cohort/
-├── pipeline/                  # Isolated pipeline module with dependencies
-│   ├── pyproject.toml        # Pipeline-specific dependencies
-│   ├── uv.lock               # Pipeline lock file
-│   ├── .python-version       # Python version specification
-│   ├── Dockerfile            # Pipeline container definition
-│   ├── pipeline.py           # Main pipeline orchestration
-│   └── ingest_data.py        # Data ingestion logic
-├── main.py                   # Entry point
-├── pyproject.toml            # Root project metadata
-└── README.md                 # This file
+├── main.py                         # Entry point
+├── pyproject.toml                  # Root project metadata (no dependencies)
+├── README.md                       # This file
+│
+└── module_1_docker_sql_terraform/  # Module 1: Docker, SQL & Terraform
+    ├── README.md                   # Module-specific docs
+    └── pipeline/                   # Data pipeline
+        ├── pyproject.toml         # Pipeline dependencies (isolated)
+        ├── uv.lock                # Dependency lock file
+        ├── .python-version        # Python version
+        ├── Dockerfile             # Container definition
+        ├── pipeline.py            # Pipeline orchestration
+        └── ingest_data.py         # Data ingestion logic
+
+# Additional modules will be added here (e.g., module_2, module_3, etc.)
 ```
+
+## How to Use
+
+1. **Root level** (`main.py`): Lists all available modules
+2. **Each module** has its own directory with isolated dependencies
+3. **Pipeline inside module**: Each module contains a pipeline folder with `pyproject.toml` for dependency management
+
+This structure allows:
+- ✅ Clean separation of concerns
+- ✅ No dependency conflicts between modules
+- ✅ Easy to add new modules
+- ✅ Each module can have different Python versions/dependencies
 
 ## Module 1: Docker & Terraform
 * **Objective:** Setting up the infrastructure (PostgreSQL database) and ingestion scripts.
