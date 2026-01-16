@@ -1,6 +1,0 @@
-[project]
-name = "2026-cohort"
-version = "0.1.0"
-description = "Data Engineering Zoomcamp 2026 - Modular project structure"
-readme = "README.md"
-requires-python = ">=3.13"

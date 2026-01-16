@@ -23,8 +23,6 @@ This project is built using a **Mobile-First Cloud Development** approach.
 
 ```
 2026_cohort/
-├── main.py                         # Entry point
-├── pyproject.toml                  # Root project metadata (no dependencies)
 ├── README.md                       # This file
 │
 └── module_1_docker_sql_terraform/  # Module 1: Docker, SQL & Terraform
@@ -42,9 +40,11 @@ This project is built using a **Mobile-First Cloud Development** approach.
 
 ## How to Use
 
-1. **Root level** (`main.py`): Lists all available modules
-2. **Each module** has its own directory with isolated dependencies
-3. **Pipeline inside module**: Each module contains a pipeline folder with `pyproject.toml` for dependency management
+Each module is self-contained with its own dependencies:
+
+1. Navigate to the module directory
+2. Follow the module's README for setup and execution
+3. Module dependencies are isolated in each pipeline's `pyproject.toml`
 
 This structure allows:
 - ✅ Clean separation of concerns
