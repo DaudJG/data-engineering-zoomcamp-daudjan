@@ -19,6 +19,22 @@ This project is built using a **Mobile-First Cloud Development** approach.
 | **Module 5** | Batch Processing | Spark | Pending |
 | **Module 6** | Streaming | Kafka | Pending |
 
+## Project Structure
+
+```
+2026_cohort/
+├── pipeline/                  # Isolated pipeline module with dependencies
+│   ├── pyproject.toml        # Pipeline-specific dependencies
+│   ├── uv.lock               # Pipeline lock file
+│   ├── .python-version       # Python version specification
+│   ├── Dockerfile            # Pipeline container definition
+│   ├── pipeline.py           # Main pipeline orchestration
+│   └── ingest_data.py        # Data ingestion logic
+├── main.py                   # Entry point
+├── pyproject.toml            # Root project metadata
+└── README.md                 # This file
+```
+
 ## Module 1: Docker & Terraform
 * **Objective:** Setting up the infrastructure (PostgreSQL database) and ingestion scripts.
 * **Key Learnings:** Container management, network bridging in Docker, and Infrastructure as Code basics.
