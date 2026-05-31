@@ -1,29 +1,39 @@
-# Engineering Zoomcamp – Progress & Portfolio
+# Data Engineering Zoomcamp – Progress Repository
 
-This repository documents my journey through the Data Engineering Zoomcamp. It reflects a focus on independent implementation, code refactoring, and mastering modern data pipelines.Data
+This repository contains my work while following the DataTalksClub Data Engineering Zoomcamp in a self-paced format.
 
-## Repository Structure
+The current focus is on rebuilding the Week 1 foundation in a clean and reproducible way: Docker, PostgreSQL, Python-based ingestion, and SQL validation. Older work from a previous attempt is kept separately for reference.
 
-📂 2026_cohort/ (Active Development)
+## Repository structure
 
-Current Status: In Progress 
+```text
+2026_cohort/
+```
 
-This directory contains my active work for the 2026 live cohort.
+Active work based on the 2026 course structure.
 
-Approach: I focus on adapting the course material rather than simply copying boilerplate code. This involves custom implementations and exploring alternative solutions to ensure a deep understanding of the concepts.
+Current focus:
 
-- Tech Stack: Docker, Sql, Python, Terraform, GCP, Airflow, DBT.
+* Docker and Docker Compose
+* PostgreSQL container setup
+* Python data ingestion
+* SQL checks and validation
+* Clean project structure and reproducible setup
 
-  -----
+```text
+archive_2025/
+```
 
-📂 archive_2025/ (Legacy)
+Earlier self-paced work based on the 2025 materials.
 
-Status: Discontinued
+This folder is kept as an archive of my previous attempt. The active work is now being reorganized under `2026_cohort/`.
 
-This folder contains initial work from the previous cohort curriculum.
+## Current status
 
-Context: I began this module when the 2025 cohort was already archived. Midway through, I experienced a critical workstation failure.
+In progress.
 
-Decision: Rather than resuming the outdated archived material on a new machine, I made the strategic decision to pause and restart with the 2026 Live Cohort. This ensures my skills align with the latest industry tools and curriculum updates.
+The immediate goal is to complete a small runnable Week 1 pipeline that starts PostgreSQL with Docker, ingests sample data with Python, and verifies the loaded data using SQL.
 
-This project is part of my continuous learning path in Data Engineering.
+## Notes
+
+This repository is used as a learning and implementation log. I am focusing on understanding the underlying tools rather than only copying course files.
