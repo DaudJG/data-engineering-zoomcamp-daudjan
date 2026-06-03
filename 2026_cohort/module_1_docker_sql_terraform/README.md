@@ -1,29 +1,39 @@
 # Module 1: Docker, SQL & Terraform
 
-This module covers containerization, database management, and infrastructure as code.
+This module contains my active work for Week 1 of the Data Engineering Zoomcamp.
 
-## Objective
-Setting up the infrastructure (PostgreSQL database) and ingestion scripts using Docker, Docker Compose, and Terraform.
+The current focus is on building the foundation step by step: Docker, PostgreSQL, Python ingestion, SQL validation, and later Terraform.
 
-## Key Learnings
-- Container management and networking
-- Docker Compose orchestration
-- Infrastructure as Code (IaC) with Terraform
-- Data ingestion patterns
+## Current status
 
-## Structure
+In progress.
 
-```
+The current implemented work is inside the `pipeline/` folder. It contains a small Python project managed with `uv` and a Dockerfile for containerizing the pipeline code.
+
+## Current structure
+
+```text
 module_1_docker_sql_terraform/
-└── pipeline/                  # Data pipeline module
-    ├── pyproject.toml        # Pipeline dependencies
-    ├── uv.lock               # Dependency lock file
-    ├── .python-version       # Python version
-    ├── Dockerfile            # Container definition
-    ├── pipeline.py           # Pipeline orchestration
-    └── ingest_data.py        # Data ingestion logic
+├── README.md
+└── pipeline/
+    ├── .dockerignore
+    ├── Dockerfile
+    ├── ingest_data.py
+    ├── pipeline.py
+    ├── pyproject.toml
+    └── uv.lock
 ```
 
-## Running the Pipeline
+## Current focus
 
-See the main [2026_cohort README](../README.md) for instructions on running modules.
+The immediate goal is to make a small runnable Week 1 pipeline:
+
+1. Build and run the Python pipeline container.
+2. Start a PostgreSQL database with Docker.
+3. Ingest sample data into PostgreSQL.
+4. Run SQL checks to verify the loaded data.
+5. Add Docker Compose once the individual pieces work.
+
+## Notes
+
+Terraform is part of the Module 1 scope, but it has not been added to this active 2026 module yet. The current priority is to get the local Docker and PostgreSQL workflow working cleanly first.
