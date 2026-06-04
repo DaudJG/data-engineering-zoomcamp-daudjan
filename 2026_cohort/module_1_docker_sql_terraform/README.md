@@ -8,14 +8,14 @@ The current focus is on building the foundation step by step: Docker, PostgreSQL
 
 In progress.
 
-The current implemented work is inside the `pipeline/` folder. It contains a small Python project managed with `uv` and a Dockerfile for containerizing the pipeline code.
+The current implemented work is inside the `docker_sql/` folder. It contains a small Python project managed with `uv` and a Dockerfile for containerizing the pipeline code.
 
 ## Current structure
 
 ```text
 module_1_docker_sql_terraform/
 ├── README.md
-└── pipeline/
+└── docker_sql/
     ├── .dockerignore
     ├── Dockerfile
     ├── ingest_data.py
