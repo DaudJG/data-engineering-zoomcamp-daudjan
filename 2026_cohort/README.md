@@ -30,11 +30,13 @@ Earlier experiments and previous attempts are kept separately in the repository 
 ## Structure
 
 ```text
+```text
 2026_cohort/
 ├── README.md
 └── module_1_docker_sql_terraform/
     ├── README.md
-    └── pipeline/
+    └── docker_sql/
+        ├── .dockerignore
         ├── Dockerfile
         ├── ingest_data.py
         ├── pipeline.py
