@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: weather
+      POSTGRES_USER: weather_user
+      POSTGRES_PASSWORD: weather_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  ingestion:
+    build: .
+    command: [
+      "--user", "weather_user",
+      "--password", "weather_pass",
+      "--host", "postgres",
+      "--port", "5432",
+      "--db", "weather"
+    ]
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
