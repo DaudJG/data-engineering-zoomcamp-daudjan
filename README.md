@@ -1,39 +1,24 @@
-# Data Engineering Zoomcamp – Progress Repository
+# Data Engineering Zoomcamp - Progress Repository
 
-This repository contains my work while following the DataTalksClub Data Engineering Zoomcamp in a self-paced format.
+My self-paced work through the DataTalksClub Data Engineering Zoomcamp.
 
-The current focus is on rebuilding the Week 1 foundation in a clean and reproducible way: Docker, PostgreSQL, Python-based ingestion, and SQL validation. Older work from a previous attempt is kept separately for reference.
+The featured project so far is a containerised **SMHI weather data pipeline** (Docker,
+PostgreSQL, Python, SQL) in
+[2026_cohort/module_1_docker_sql_terraform/docker_sql/](2026_cohort/module_1_docker_sql_terraform/docker_sql/),
+with Terraform for the GCP landing zone alongside it.
 
-## Repository structure
-
-```text
-2026_cohort/
-```
-
-Active work based on the 2026 course structure.
-
-Current focus:
-
-* Docker and Docker Compose
-* PostgreSQL container setup
-* Python data ingestion
-* SQL checks and validation
-* Clean project structure and reproducible setup
+## Structure
 
 ```text
-archive_2025/
+.
+├── 2026_cohort/        # active work (Module 1 complete, more to come)
+│   └── module_1_docker_sql_terraform/
+│       ├── docker_sql/   # SMHI -> Postgres pipeline + SQL validation
+│       └── terraform/    # GCS bucket + BigQuery dataset (IaC)
+└── archive_2025/       # earlier self-paced attempt, kept for reference
 ```
 
-Earlier self-paced work based on the 2025 materials.
+## Approach
 
-This folder is kept as an archive of my previous attempt. The active work is now being reorganized under `2026_cohort/`.
-
-## Current status
-
-In progress.
-
-The immediate goal is to complete a small runnable Week 1 pipeline that starts PostgreSQL with Docker, ingests sample data with Python, and verifies the loaded data using SQL.
-
-## Notes
-
-This repository is used as a learning and implementation log. I am focusing on understanding the underlying tools rather than only copying course files.
+I focus on understanding the underlying tools rather than only copying course files. Each
+project has a README, an architecture diagram, and a reproducible setup.
