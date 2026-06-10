@@ -202,7 +202,11 @@ writing the ingestion script.
 <!-- ILLUSTRATION 5 of 5 — "Hourly scheduling" (prompt: ILLUSTRATION_PROMPTS.md → Prompt 5). Save the image as images/05-scheduling.png -->
 ![Running the ingestion once per hour to build up a stack of hourly snapshots](images/05-scheduling.png)
 
-To build up a time series across the day, run the script once per hour with cron:
+To build up a time series across the day, run the script once per hour with cron.
+
+Cron runs jobs with a minimal environment, so the crontab needs two things an
+interactive shell gives you for free: `uv` on the PATH, and somewhere for the
+output to go.
 
 ```bash
 crontab -e
@@ -211,10 +215,17 @@ crontab -e
 Add:
 
 ```
-0 * * * * cd /path/to/docker_sql && bash ingest.sh
+PATH=/home/<your-user>/.local/bin:/usr/bin:/bin
+0 * * * * cd /path/to/docker_sql && bash ingest.sh >> ingest.log 2>&1
 ```
 
-After a full day you will have 24 hourly snapshots across ~185 stations.
+On WSL2 the cron service is not running by default. Start it with
+`sudo service cron start`, or enable systemd in `/etc/wsl.conf` to make it
+persist across restarts. Cron only fires while the machine, WSL, and Docker
+Desktop are actually running.
+
+After a full day you will have 24 hourly snapshots across ~185 stations. If an
+hour is missing, check `ingest.log` for what went wrong.
 
 ---
 
