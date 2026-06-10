@@ -61,14 +61,3 @@ secrets.json
 # Ignore local main entry used for quick local runs
 2026_cohort/main.py
 
-# Internal planning / reference docs (kept local, not part of the public repo)
-AGENTS.md
-CLAUDE.md
-BRAND.md
-WEEK1_PLAN.md
-COURSE_STRUCTURE.md
-LEARNING_ROADMAP.md
-PROJECT_REFERENCE.md
-2026_cohort/module_1_docker_sql_terraform/docker_sql/CODING_STYLE.md
-2026_cohort/module_1_docker_sql_terraform/docker_sql/ILLUSTRATION_PROMPTS.md
-2026_cohort/module_1_docker_sql_terraform/docker_sql/INTERVIEW_PREP.md
