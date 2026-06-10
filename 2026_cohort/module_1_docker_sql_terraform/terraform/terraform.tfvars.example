@@ -1,0 +1,8 @@
+# Copy this file to terraform.tfvars and fill in your own values.
+# terraform.tfvars is gitignored - it holds your real project details.
+
+project_id       = "your-gcp-project-id"
+region           = "europe-north1"
+credentials_file = "./keys/gcp-credentials.json"
+bucket_name      = "smhi-weather-datalake-<your-unique-suffix>"
+dataset_id       = "smhi_weather"
