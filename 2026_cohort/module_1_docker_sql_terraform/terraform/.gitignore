@@ -1,0 +1,14 @@
+# Terraform state and working files
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Real variable values (keep the .example committed)
+*.tfvars
+!*.tfvars.example
+
+# Service account keys - never commit these
+keys/
+*-credentials.json
