@@ -1,7 +1,7 @@
 [project]
-name = "2026-cohort"
+name = "smhi-pipeline"
 version = "0.1.0"
-description = "Add your description here"
+description = "SMHI air temperature ingestion into PostgreSQL"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
